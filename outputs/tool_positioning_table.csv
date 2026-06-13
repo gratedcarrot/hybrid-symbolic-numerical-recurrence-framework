@@ -1,0 +1,6 @@
+Tool/System,Main Capability,Relative Position of Proposed Model
+SymPy,symbolic recurrence solving through rsolve,"adds recurrence classification, verification, fallback routing, and behavioural reports"
+SageMath,linear recurrence and sequence computation tools,adds lightweight solve-or-simulate pipeline and CSV/plot reporting
+MATLAB Symbolic Toolbox,symbolic recurrence solving,adds recurrence-specific fallback diagnostics and batch experiments
+Wolfram Mathematica,advanced recurrence solving and recurrence table generation,adds transparent classification and explainable fallback behaviour indicators
+Enhanced proposed model,"classification, symbolic solving, verification, simulation fallback, behavioural analysis",focused recurrence-analysis workflow for paper experiments and education

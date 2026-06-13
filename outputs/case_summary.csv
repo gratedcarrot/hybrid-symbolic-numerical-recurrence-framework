@@ -1,0 +1,15 @@
+ID,Recurrence Relation,Order,Classification,Selected Mode,Special Operator,Purpose
+C1,"a_n = 2a_{n-1}, a_0 = 1",1,first-order homogeneous linear,Symbolic,none,baseline geometric recurrence
+C2,"a_n = 2a_{n-1} + 3, a_0 = 1",1,first-order non-homogeneous linear,Symbolic,none,constant non-homogeneous term
+C3,"a_n = a_{n-1} + 5, a_0 = 2",1,arithmetic progression,Symbolic,none,linear additive growth
+C4,"a_n = 2a_{n-1} + n, a_0 = 1",1,first-order index-dependent linear,Symbolic,none,index-term non-homogeneous recurrence
+C5,"a_n = a_{n-1} + a_{n-2}, a_0 = 0, a_1 = 1",2,second-order homogeneous linear,Symbolic,none,Fibonacci-type recurrence
+C6,"a_n = 3a_{n-1} - 2a_{n-2}, a_0 = 1, a_1 = 2",2,second-order homogeneous linear,Symbolic,none,distinct characteristic-root recurrence
+C7,"a_n = 6a_{n-1} - 11a_{n-2} + 6a_{n-3}, a_0 = 3, a_1 = 6, a_2 = 14",3,third-order homogeneous linear,Symbolic,none,higher-order symbolic recurrence with distinct characteristic roots
+C8,"a_n = 2a_{n-1} - a_{n-2}, a_0 = 1, a_1 = 3",2,second-order repeated-root linear,Symbolic,none,repeated characteristic root
+C9,"a_n = a_{n-1} + n^2, a_0 = 0",1,first-order polynomial non-homogeneous linear,Symbolic,none,polynomial forcing term
+C10,"a_n = 3a_{n-1} - 3a_{n-2} + a_{n-3}, a_0 = 1, a_1 = 2, a_2 = 4",3,third-order repeated-root linear,Symbolic,none,higher-order repeated-root symbolic case
+C11,"a_n = n a_{n-1}, a_0 = 1",1,variable-coefficient recurrence,Fallback,variable_coefficient,factorial-like growth pattern
+C12,"a_n = a_{n-1} + gcd(n, a_{n-1}), a_1 = 7",1,Rowland gcd number-theoretic recurrence,Fallback,gcd,increment and prime-jump diagnostics
+C13,"a_n = (a_{n-1})^2 + 1, a_0 = 1",1,nonlinear square recurrence,Fallback,power,explosive nonlinear growth and divergence guard
+C14,"a_n = (a_{n-1} + 2) mod 5, a_0 = 0",1,modular periodic recurrence,Fallback,mod,periodicity and tail-cycle detection

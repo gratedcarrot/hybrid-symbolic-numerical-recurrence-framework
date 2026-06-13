@@ -1,0 +1,3 @@
+Version,Benchmark Cases,Symbolic Cases,Fallback Cases,Higher-order Symbolic Support,Polynomial Non-homogeneous Support,Repeated-root Coverage,Simulation Indicators,Rowland-specific Diagnostics,Behaviour Classification
+Initial paper version,8,6,2,No,Limited,Limited,"first difference, second difference, ratio, growth trend",basic increment observation,basic
+Enhanced version,14,10,4,Yes,Yes,Yes,"first/second differences, ratios, log growth, digit length, monotonicity, periodicity, spikes, overflow guard","increment sequence, prime jump check, jump positions, jump frequency",multi-indicator

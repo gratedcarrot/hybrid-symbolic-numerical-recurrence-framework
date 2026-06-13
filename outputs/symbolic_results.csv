@@ -1,0 +1,15 @@
+ID,Type,Mode,Model Output,Method,Solver Status,Verification,Match Count,Terms Checked,Message
+C1,first-order homogeneous linear,Symbolic,2**n,summation formula for first-order linear recurrence,SOLVED,PASS,20,20,verified
+C2,first-order non-homogeneous linear,Symbolic,2**(n + 2) - 3,summation formula for first-order linear recurrence,SOLVED,PASS,20,20,verified
+C3,arithmetic progression,Symbolic,5*n + 2,summation formula for first-order linear recurrence,SOLVED,PASS,20,20,verified
+C4,first-order index-dependent linear,Symbolic,3*2**n - n - 2,summation formula for first-order linear recurrence,SOLVED,PASS,20,20,verified
+C5,second-order homogeneous linear,Symbolic,sqrt(5)*(-(1 - sqrt(5))**n + (1 + sqrt(5))**n)/(5*2**n),characteristic-polynomial method,SOLVED,PASS,20,20,verified
+C6,second-order homogeneous linear,Symbolic,2**n,characteristic-polynomial method,SOLVED,PASS,20,20,verified
+C7,third-order homogeneous linear,Symbolic,2**n + 3**n + 1,characteristic-polynomial method,SOLVED,PASS,20,20,verified
+C8,second-order repeated-root linear,Symbolic,2*n + 1,characteristic-polynomial method,SOLVED,PASS,20,20,verified
+C9,first-order polynomial non-homogeneous linear,Symbolic,n*(2*n**2 + 3*n + 1)/6,summation formula for first-order linear recurrence,SOLVED,PASS,20,20,verified
+C10,third-order repeated-root linear,Symbolic,n**2/2 + n/2 + 1,characteristic-polynomial method,SOLVED,PASS,20,20,verified
+C11,variable-coefficient recurrence,Fallback,N/A,simulation fallback,FALLBACK,N/A,0,0,Not a supported symbolic case
+C12,Rowland gcd number-theoretic recurrence,Fallback,N/A,simulation fallback,FALLBACK,N/A,0,0,Not a supported symbolic case
+C13,nonlinear square recurrence,Fallback,N/A,simulation fallback,FALLBACK,N/A,0,0,Not a supported symbolic case
+C14,modular periodic recurrence,Fallback,N/A,simulation fallback,FALLBACK,N/A,0,0,Not a supported symbolic case

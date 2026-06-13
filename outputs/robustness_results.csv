@@ -1,0 +1,4 @@
+Test,Status,Message
+missing_initial_condition,PASS,R1: missing initial conditions
+insufficient_initial_conditions,PASS,R2: insufficient initial conditions for index 1; missing -1
+zero_ratio_safety,PASS,generated 10 terms; growth=linear

@@ -1,0 +1,15 @@
+ID,SymPy Status,SymPy Closed Form,Comparison Result,Terms Checked,Message
+C1,COMPARABLE,2**n,PASS,20,checked
+C2,COMPARABLE,2**(n + 2) - 3,PASS,20,checked
+C3,COMPARABLE,5*n + 2,PASS,20,checked
+C4,COMPARABLE,3*2**n - n - 2,PASS,20,checked
+C5,COMPARABLE,sqrt(5)*(-(1 - sqrt(5))**n + (1 + sqrt(5))**n)/(5*2**n),PASS,20,checked
+C6,COMPARABLE,2**n,PASS,20,checked
+C7,COMPARABLE,2**n + 3**n + 1,PASS,20,checked
+C8,COMPARABLE,2*n + 1,PASS,20,checked
+C9,COMPARABLE,n*(2*n**2 + 3*n + 1)/6,PASS,20,checked
+C10,COMPARABLE,n**2/2 + n/2 + 1,PASS,20,checked
+C11,N/C,N/A,N/A,0,Fallback/non-comparable case
+C12,N/C,N/A,N/A,0,Fallback/non-comparable case
+C13,N/C,N/A,N/A,0,Fallback/non-comparable case
+C14,N/C,N/A,N/A,0,Fallback/non-comparable case
