@@ -1,113 +1,101 @@
-# Hybrid Symbolic–Numerical Recurrence Framework
+# Enhanced Hybrid Symbolic-Numerical Recurrence Model
 
-This repository contains the code and generated outputs for the paper:
+This repository contains an enhanced version of the hybrid recurrence relation analyser used for the paper:
 
-**A Hybrid Symbolic–Numerical Framework for Solving and Simulating Recurrence Relations**
+**A Hybrid Symbolic-Numerical Model for Solving and Simulating Recurrence Relations**
 
-The framework follows a **solve-or-simulate** workflow for recurrence relation analysis:
+The enhanced version is designed to address reviewer concerns by expanding both:
 
-1. Parse a structured recurrence expression.
-2. Classify recurrence structure.
-3. Attempt exact symbolic solving for supported classes.
-4. Verify the closed-form expression against recurrence-generated terms.
-5. Route unsupported, nonlinear, or number-theoretic recurrences to simulation fallback.
-6. Generate numerical summaries and plots.
+1. **Symbolic solving ability**
+   - first-order homogeneous and non-homogeneous recurrences
+   - arithmetic progression cases
+   - first-order polynomial non-homogeneous cases
+   - second-order and selected higher-order homogeneous linear recurrences
+   - repeated characteristic-root cases
+   - closed-form verification against recurrence-generated terms
+   - external SymPy comparison for comparable symbolic cases
 
-## Main Features
+2. **Simulation/fallback ability**
+   - first and second differences
+   - ratio trend analysis
+   - logarithmic growth slope
+   - digit-length growth
+   - monotonicity detection
+   - periodicity/tail-cycle detection
+   - spike/jump detection
+   - overflow/divergence guard
+   - Rowland-specific increment and prime-jump analysis
 
-- Structured recurrence parsing
-- Classification by order, linearity, homogeneity, coefficient type, and special operators
-- Closed-form solving for supported first-order and homogeneous linear constant-coefficient recurrences
-- Computational verification of symbolic solutions
-- Simulation fallback for unsupported/nonlinear recurrences such as Rowland gcd recurrence and nonlinear square recurrence
-- Numerical analysis using differences, ratios, monotonicity, and growth indicators
-- Optional comparison with SymPy for supported symbolic cases
-
-## Repository Structure
+## Folder structure
 
 ```text
-src/                    Core framework modules
-  parser.py              Recurrence expression parser
-  classifier.py          Recurrence classifier
-  symbolic_solver.py     Closed-form solver for supported classes
-  core_engine.py         Iterative sequence generation engine
-  verifier.py            Closed-form verification module
-  analyzer.py            Numerical analysis utilities
-  hybrid_analyzer.py     Main solve-or-simulate pipeline
-  plotter.py             Plot generation
-  cases.py               Experimental recurrence cases
-  reporting.py           CSV/text report generation
-
-tests/                  Test scripts
-results/                Generated CSV and text reports
-plots/                  Generated experiment plots
-paper_figures/          Final figures used in the manuscript
-run_v2_experiments.py   Main experiment runner
-compare_with_sympy.py   Optional comparison with SymPy
-requirements.txt        Python dependencies
+enhanced_recurrence_model/
+├── run_all.py
+├── requirements.txt
+├── README.md
+├── src/
+│   ├── __init__.py
+│   ├── cases.py
+│   ├── engine.py
+│   ├── symbolic_solver.py
+│   ├── simulator.py
+│   ├── analysis.py
+│   ├── sympy_compare.py
+│   ├── reporting.py
+│   └── plotting.py
+├── tests/
+│   └── test_core.py
+├── outputs/
+└── plots/
 ```
 
 ## Installation
 
-Python 3.10 or later is recommended.
-
 ```bash
+python -m venv .venv
+.venv\Scripts\activate     # Windows
+# source .venv/bin/activate # macOS/Linux
+
 pip install -r requirements.txt
 ```
 
-## Run Experiments
+## Run all experiments
 
 ```bash
-python run_v2_experiments.py
+python run_all.py
 ```
 
-Generated outputs:
+This creates CSV files in `outputs/` and PNG figures in `plots/`.
 
-```text
-results/v2_hybrid_analysis_results.csv
-results/v2_hybrid_analysis_report.txt
-plots/*.png
-```
-
-## Compare with SymPy
+## Run tests
 
 ```bash
-python compare_with_sympy.py
+python -m pytest tests
 ```
 
-Generated output:
+## Main CSV outputs
 
-```text
-results/v2_sympy_comparison.csv
-```
+| CSV file | Purpose |
+|---|---|
+| `case_summary.csv` | Expanded recurrence cases C1-C14 with classification and selected mode. |
+| `symbolic_results.csv` | Closed forms, verification status, and match count for symbolic cases. |
+| `sympy_comparison_results.csv` | External SymPy comparison for comparable cases. |
+| `generated_terms.csv` | Generated sequence terms for all cases. |
+| `simulation_indicators.csv` | Multi-indicator behavioural analysis for all cases. |
+| `fallback_deep_analysis.csv` | Detailed fallback diagnostics for nonlinear, variable-coefficient, periodic, and number-theoretic cases. |
+| `rowland_jump_analysis.csv` | Rowland recurrence increment sequence, jump positions, and prime/composite labels. |
+| `scalability_results.csv` | Runtime measurements for increasing term counts. |
+| `robustness_results.csv` | Validation/error-handling checks. |
+| `ablation_summary.csv` | Initial-vs-enhanced capability comparison. |
+| `tool_positioning_table.csv` | Comparison against SymPy, SageMath, MATLAB, and Mathematica. |
 
-## Run Tests
+## Suggested paper tables from outputs
 
-```bash
-python tests/test_v2_pipeline.py
-```
-
-or, if `pytest` is installed:
-
-```bash
-python -m pytest tests/test_v2_pipeline.py
-```
-
-## Experimental Cases
-
-The included experiments evaluate eight recurrence cases:
-
-- First-order homogeneous recurrence
-- First-order non-homogeneous recurrence with constant term
-- Arithmetic progression as recurrence
-- First-order non-homogeneous recurrence with index term
-- Second-order Fibonacci-type recurrence
-- Second-order linear recurrence
-- Rowland gcd recurrence
-- Nonlinear square recurrence
-
-The first six cases are solved symbolically and verified. The Rowland gcd recurrence and nonlinear square recurrence are routed to simulation fallback.
-
-## Notes
-
-The framework is designed as a scoped recurrence-analysis workflow, not as a universal replacement for computer algebra systems. Its contribution is the integration of classification, symbolic solving, computational verification, numerical analysis, visualization, and simulation fallback within one transparent pipeline.
+- Table III: use `case_summary.csv`
+- Table IV: use `symbolic_results.csv`
+- Table V: use `simulation_indicators.csv`
+- Table VI: use `fallback_deep_analysis.csv`
+- Table VII: use `rowland_jump_analysis.csv` summary
+- Table VIII: use `scalability_results.csv`
+- Table IX: use `ablation_summary.csv`
+- Related-work/tool comparison: use `tool_positioning_table.csv`
