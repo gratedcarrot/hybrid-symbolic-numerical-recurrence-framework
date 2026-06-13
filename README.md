@@ -1,4 +1,4 @@
-# Enhanced Hybrid Symbolic-Numerical Recurrence Model
+# Hybrid Symbolic-Numerical Recurrence Model
 
 This repository contains the implementation used for the paper:
 
@@ -35,7 +35,7 @@ The model follows a solve-or-simulate approach for recurrence relation analysis.
 ## Folder Structure
 
 ```text
-enhanced_recurrence_model/
+recurrence_model/
 ├── run_all.py
 ├── requirements.txt
 ├── README.md
